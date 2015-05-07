@@ -10,5 +10,6 @@
     <summary lang="en">CelticDroid Wizard</summary>
     <description lang="en">CelticDroid Wizard</description>
     <platform>all</platform>
+    <source>https://github.com/Dublintaff/CelticDroid-Repo</source>
   </extension>
 </addon>
