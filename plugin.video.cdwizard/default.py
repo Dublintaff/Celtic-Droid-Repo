@@ -8,16 +8,16 @@ import time
 
 
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
-base='http://celticdroid.uhostfull.com/Celtic%20Droid%20Wizard/'
+base='http://www.celticdroid.net/CelticDroidWizard/'
 ADDON=xbmcaddon.Addon(id='plugin.video.cdwizard')
     
     
 VERSION = "1.0.0"
-PATH = "Celtic Droid Wizard"            
+PATH = "CelticDroidWizard"            
 
     
 def CATEGORIES():
-    link = OPEN_URL('http://celticdroid.uhostfull.com/Celtic%20Droid%20Wizard/CelticDroidWizard.txt').replace('\n','').replace('\r','')
+    link = OPEN_URL('http://www.celticdroid.net/CelticDroidWizard/CelticDroidWizard.txt').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,1,iconimage,fanart,description)
@@ -36,7 +36,7 @@ def OPEN_URL(url):
 def wizard(name,url,description):
     path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
     dp = xbmcgui.DialogProgress()
-    dp.create("Celtic Droid Wizard","Downloading ",'', 'Please Wait')
+    dp.create("CelticDroid Wizard","Downloading ",'', 'Please Wait')
     lib=os.path.join(path, name+'.zip')
     try:
        os.remove(lib)
@@ -51,7 +51,7 @@ def wizard(name,url,description):
     print '======================================='
     extract.all(lib,addonfolder,dp)
     dialog = xbmcgui.Dialog()
-    dialog.ok("Celtic Droid", "Please Click On OK", "And Disconnect The Power Cable To Finish Update")
+    dialog.ok("CelticDroidTV.com", "Please Click On OK", "Effect   [COLOR yellow]And Disconnect The Power Cable To Finish Update[/COLOR]")
         
       
         
